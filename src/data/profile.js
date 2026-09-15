@@ -1,0 +1,15 @@
+export const profile = {
+  name: "Anuska Gupta",
+  initials: "AG",
+  role: "AI & Data Science Student",
+  headline: "I build practical software and AI systems for real-world problems.",
+  summary: "B.Tech student at KPR Institute of Engineering and Technology, focused on software development, machine learning, data science, and full-stack applications.",
+  education: "B.Tech — Artificial Intelligence & Data Science",
+  institute: "KPR Institute of Engineering and Technology",
+  location: "India",
+  availability: "Open to internships & software opportunities",
+  email: "anuskagupta55@gmail.com",
+  linkedin: "https://www.linkedin.com/in/anuska-gupta-53b498316/",
+  github: "https://github.com/anuskagupta123",
+  resume: "/anuska_resume.pdf",
+}

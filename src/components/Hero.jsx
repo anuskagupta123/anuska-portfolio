@@ -1,0 +1,7 @@
+import { ArrowDown, ArrowUpRight, Github, Linkedin, MapPin } from "lucide-react"
+import profileImage from "../assets/profile.jpg"
+import { profile } from "../data/profile"
+
+export default function Hero() {
+  return <section id="home" className="hero section-shell"><div className="hero-grid" aria-hidden="true" /><div className="hero-content"><div className="status-pill"><span className="status-dot" /> {profile.availability}</div><div className="hero-copy"><p className="eyebrow">{profile.role}</p><h1>{profile.headline}</h1><p className="hero-summary">{profile.summary}</p><div className="hero-actions"><a className="button button-primary" href="#projects">Explore projects <ArrowUpRight size={17} /></a><a className="button button-quiet" href={profile.resume} target="_blank" rel="noreferrer">Download resume</a></div><div className="social-row"><a href={profile.github} target="_blank" rel="noreferrer"><Github size={17} /> GitHub</a><a href={profile.linkedin} target="_blank" rel="noreferrer"><Linkedin size={17} /> LinkedIn</a><span><MapPin size={16} /> {profile.location}</span></div></div></div><div className="hero-portrait-wrap"><div className="portrait-frame"><img src={profileImage} alt="Anuska Gupta" /></div><div className="hero-note"><span>01</span><span>Building with intent<br />learning in public</span></div></div><a className="scroll-cue" href="#about" aria-label="Scroll to about section"><ArrowDown size={15} /> scroll to explore</a></section>
+}
