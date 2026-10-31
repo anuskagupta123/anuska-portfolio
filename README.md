@@ -1,16 +1,82 @@
-# React + Vite
+# Anuska Gupta Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive, data-driven portfolio for Anuska Gupta, an AI and Data Science Engineer focused on practical machine learning, data applications, and software development.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Responsive single-page portfolio with semantic sections
+- Persistent dark and light themes with system preference detection
+- Active section navigation and responsive mobile menu
+- Animated hero role text and scroll-triggered card reveals
+- Filterable project showcase with project detail modal
+- Experience timeline, achievements, and certificate links
+- Accessible contact form that prepares an email draft through the visitor's email client
+- Local resume and certificate assets
+- SEO metadata and reduced-motion support
 
-## React Compiler
+The contact form does not use a server or third-party email service. It opens a prefilled `mailto:` draft and clearly tells the visitor that no server-side submission is configured.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technology stack
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- Framer Motion
+- Lucide React
+- React Type Animation
+- ESLint
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project structure
+
+```text
+src/
+  components/       Reusable portfolio sections
+  data/             Profile, skills, projects, experience, and credentials
+  assets/           Images used by the interface
+  App.jsx           Page composition and theme state
+  index.css         Design system and responsive styling
+public/
+  certificates/    Resume and certificate PDFs
+```
+
+## Getting started
+
+Requirements: Node.js 20 or newer and npm.
+
+```bash
+npm install
+npm run dev
+```
+
+Open the local URL printed by Vite.
+
+## Development commands
+
+```bash
+npm run dev       # Start the Vite development server
+npm run lint      # Run ESLint
+npm run build     # Create a production build
+npm run preview   # Preview the production build locally
+```
+
+## Updating portfolio content
+
+Portfolio content is separated from the UI:
+
+- Edit `src/data/profile.js` for identity, links, location, and resume path.
+- Edit `src/data/skills.js` to add or remove skill groups.
+- Edit `src/data/projects.js` to add projects, categories, technology tags, descriptions, links, and detail bullets.
+- Edit `src/data/experience.js` to update roles, technologies, and responsibilities.
+- Edit `src/data/achievements.js` and `src/data/certificates.js` for credentials.
+
+Keep local PDF files in `public/certificates/` and use paths beginning with `/certificates/`.
+
+## Deployment on Vercel
+
+1. Push the repository to GitHub.
+2. Import the repository in Vercel.
+3. Use the default Vite settings:
+   - Build command: `npm run build`
+   - Output directory: `dist`
+4. Deploy.
+
+The project is a static Vite application and does not require environment variables or a backend.
